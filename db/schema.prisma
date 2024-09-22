@@ -23,6 +23,7 @@ model User {
 
   tokens   Token[]
   sessions Session[]
+  recipes  Recipe[]
 }
 
 model Session {
@@ -74,6 +75,8 @@ model Recipe {
   steps       Step[]
   rating      Float
   image       String
+  user        User         @relation(fields: [userId], references: [id])
+  userId      Int
 }
 
 model Ingredient {

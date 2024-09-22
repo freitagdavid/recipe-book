@@ -1,5 +1,6 @@
 import { forwardRef, PropsWithoutRef } from "react"
 import { useField, useFormikContext, ErrorMessage } from "formik"
+import { Input } from "@nextui-org/react"
 
 export interface LabeledTextFieldProps extends PropsWithoutRef<JSX.IntrinsicElements["input"]> {
   /** Field name. */
@@ -20,7 +21,8 @@ export const LabeledTextField = forwardRef<HTMLInputElement, LabeledTextFieldPro
       <div {...outerProps}>
         <label>
           {label}
-          <input {...input} disabled={isSubmitting} {...props} ref={ref} />
+          <Input {...input} disabled={isSubmitting} {...props} size="md" ref={ref} />
+          {/* <input {...input} disabled={isSubmitting} {...props} ref={ref} /> */}
         </label>
 
         <ErrorMessage name={name}>

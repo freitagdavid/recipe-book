@@ -19,6 +19,17 @@ export function RecipeForm<S extends z.ZodType<any, any>>(props: FormProps<S>) {
       <LabeledTextField name="step" label="Step" placeholder="Step" type="text" />
       <LabeledTextField name="rating" label="Rating" placeholder="Rating" type="number" />
       <LabeledTextField name="image" label="Image" placeholder="Image" type="text" />
+      <LabeledTextField
+        name="description"
+        label="Description"
+        placeholder="Description"
+        type="text"
+      />
+      <LabeledTextField name="title" label="Title" placeholder="Title" type="text" />
+      <LabeledTextField name="ingredient" label="Ingredient" placeholder="Ingredient" type="text" />
+      <LabeledTextField name="step" label="Step" placeholder="Step" type="text" />
+      <LabeledTextField name="rating" label="Rating" placeholder="Rating" type="number" />
+      <LabeledTextField name="image" label="Image" placeholder="Image" type="text" />
       {/* template: <__component__ name="__fieldName__" label="__Field_Name__" placeholder="__Field_Name__"  type="__inputType__" /> */}
     </Form>
   )
